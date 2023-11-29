@@ -1,47 +1,46 @@
 /* Imagens */
 
-const killImagem = "./src/img/metallica_killemall.jpg";
-const blackImagem = "./src/img/metallica_blackalbumn.jpg";
-const rideImagem = "./src/img/metallica_ridethelightning.jpg";
+import killImagem from "./img/metallica_killemall.jpg";
+import blackImagem from "./img/metallica_blackalbumn.jpg";
+import rideImagem from "./img/metallica_ridethelightning.jpg";
 
 /* Músicas */
 
 // Kill em All
-const hitTheLights = "./src/audios/kill-em-all/hit-the-lights.mp3";
-const theFourHorsemen = "./src/audios/kill-em-all/the-four-horsemen.mp3";
-const motorbreath = "./src/audios/kill-em-all/motorbreath.mp3";
-const jumpInTheFire = "./src/audios/kill-em-all/jump-in-the-fire.mp3";
-const anesthesiaPullingTeeth = "./audios/kill-em-all/anesthesia-pulling-teeth.mp3";
-const whiplash = "./src/audios/kill-em-all/whiplash.mp3";
-const phantomLord = "./audios/kill-em-all/phantom-lord.mp3";
-const noRemorse = "./src/audios/kill-em-all/no-remorse.mp3";
-const seekDestroy = "./src/audios/kill-em-all/seek-n-destroy.mp3";
-const metalMillitia = "./src/audios/kill-em-all/metal-militia.mp3";
+import hitTheLights from "./audios/kill-em-all/hit-the-lights.mp3";
+import theFourHorsemen from "./audios/kill-em-all/the-four-horsemen.mp3";
+import motorbreath from "./audios/kill-em-all/motorbreath.mp3";
+import jumpInTheFire from "./audios/kill-em-all/jump-in-the-fire.mp3";
+import anesthesiaPullingTeeth from "./audios/kill-em-all/anesthesia-pulling-teeth.mp3";
+import whiplash from "./audios/kill-em-all/whiplash.mp3";
+import phantomLord from "./audios/kill-em-all/phantom-lord.mp3";
+import noRemorse from "./audios/kill-em-all/no-remorse.mp3";
+import seekDestroy from "./audios/kill-em-all/seek-n-destroy.mp3";
+import metalMillitia from "./audios/kill-em-all/metal-militia.mp3";
 
 // Black Album
-const enterSandman = "./src/audios/black-album/enter-sandman.mp3";
-const sadButTrue = "./src/audios/black-album/sad-but-true.mp3";
-const holierThanThou = "./src/audios/black-album/holier-than-thou.mp3";
-const theUnforgiven = "./src/audios/black-album/the-unforgiven.mp3";
-const whereverIMayRoam = "./src/audios/black-album/wherever-i-may-roam.mp3";
-const dontTreadOnMe = "./src/audios/black-album/dont-tread-on-me.mp3";
-const throughTheNever = "./src/audios/black-album/through-the-never.mp3";
-const nothingElseMatters = "./src/audios/black-album/nothing-else-matters.mp3";
-const ofWolfAndMan = "./src/audios/black-album/of-wolf-and-man.mp3";
-const myFriendOfMisery = "./src/audios/black-album/my-friend-of-misery.mp3";
-const theStruggleWithin = "./src/audios/black-album/the-struggle-within.mp3";
+import enterSandman from "./audios/black-album/enter-sandman.mp3";
+import sadButTrue from "./audios/black-album/sad-but-true.mp3";
+import holierThanThou from "./audios/black-album/holier-than-thou.mp3";
+import theUnforgiven from "./audios/black-album/the-unforgiven.mp3";
+import whereverIMayRoam from "./audios/black-album/wherever-i-may-roam.mp3";
+import dontTreadOnMe from "./audios/black-album/dont-tread-on-me.mp3";
+import throughTheNever from "./audios/black-album/through-the-never.mp3";
+import nothingElseMatters from "./audios/black-album/nothing-else-matters.mp3";
+import ofWolfAndMan from "./audios/black-album/of-wolf-and-man.mp3";
+import myFriendOfMisery from "./audios/black-album/my-friend-of-misery.mp3";
+import theStruggleWithin from "./audios/black-album/the-struggle-within.mp3";
 
 // Ride the Lightning
-const fightFireWithFire = "./src/audios/ride-the-lightning/fight-fire-with-fire.mp3";
-const rideTheLightning = "./src/audios/ride-the-lightning/ride-the-lightning.mp3";
-const forWhomTheBellTolls = "./src/audios/ride-the-lightning/for-whom-the-bell-tolls.mp3";
-const fadeToBlack = "./src/audios/ride-the-lightning/fade-to-black.mp3";
-const trappedUnderIce = "./src/audios/ride-the-lightning/trapped-under-ice.mp3";
-const escapea = "./src/audios/ride-the-lightning/escape.mp3";
-const creepingDeath = "./src/audios/ride-the-lightning/creeping-death.mp3";
-const theCallOfKtulu = "./src/audios/ride-the-lightning/the-call-of-ktulu.mp3";
+import fightFireWithFire from "./audios/ride-the-lightning/fight-fire-with-fire.mp3";
+import rideTheLightning from "./audios/ride-the-lightning/ride-the-lightning.mp3";
+import forWhomTheBellTolls from "./audios/ride-the-lightning/for-whom-the-bell-tolls.mp3";
+import fadeToBlack from "./audios/ride-the-lightning/fade-to-black.mp3";
+import trappedUnderIce from "./audios/ride-the-lightning/trapped-under-ice.mp3";
+import escape from "./audios/ride-the-lightning/escape.mp3";
+import creepingDeath from "./audios/ride-the-lightning/creeping-death.mp3";
+import theCallOfKtulu from "./audios/ride-the-lightning/the-call-of-ktulu.mp3";
 
-const btn = document.querySelector('#btn');
 
 const albuns = [
     {
@@ -92,14 +91,11 @@ const albuns = [
             {id: 3, nome: 'For Whom the Bell Tolls', musica: new Audio(forWhomTheBellTolls)},
             {id: 4, nome: 'Fade to Black', musica: new Audio(fadeToBlack)},
             {id: 5, nome: 'Trapped Under Ice', musica: new Audio(trappedUnderIce)},
-            {id: 6, nome: 'Escape', musica: new Audio(escapea)},
+            {id: 6, nome: 'Escape', musica: new Audio(escape)},
             {id: 7, nome: 'Creeping Death', musica: new Audio(creepingDeath)},
             {id: 8, nome: 'The Call of Ktulu', musica: new Audio(theCallOfKtulu)}
         ]
     }
 ];
 
-const nav = document.querySelector('.nav-albuns')
-
-
-renderizarAlbuns();
+export default albuns;

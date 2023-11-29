@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+  background-image: url(./img/backgroundImage.jpg);
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
+
+}
