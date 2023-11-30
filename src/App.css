@@ -7,9 +7,21 @@
 .App {
   text-align: center;
   position: relative;
-  background-image: url(./img/backgroundImage.jpg);
   background-repeat: repeat-x;
   background-size: cover;
   background-position: center;
+  background-image: url(./img/backgroundImage.jpg);
+}
 
+*::-webkit-scrollbar{
+  background-color: rgb(29, 29, 29);
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: rgb(48, 48, 48);
+}
+
+*::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(73, 73, 73);
 }

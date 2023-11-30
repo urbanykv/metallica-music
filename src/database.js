@@ -45,6 +45,7 @@ import theCallOfKtulu from "./audios/ride-the-lightning/the-call-of-ktulu.mp3";
 const albuns = [
     {
         id: 1,
+        id_string: 'kill',
         nome: "Kill 'Em All",
         imagem: killImagem,
         ano: new Date("1983").getFullYear(),
@@ -63,6 +64,7 @@ const albuns = [
     },
     {
         id: 2,
+        id_string: 'black',
         nome: 'Metallica (Black Album)',
         imagem: blackImagem,
         ano: new Date('1991').getFullYear(),
@@ -82,6 +84,7 @@ const albuns = [
     },
     {
         id: 3,
+        id_string: 'ride',
         nome: 'Ride the Lightning',
         imagem: rideImagem,
         ano: new Date('1984').getFullYear(),
