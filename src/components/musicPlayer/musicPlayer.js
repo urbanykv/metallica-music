@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import './musicPlayer.css';
 import play from '../../assets/play.svg';
 import pause from '../../assets/pause.svg';
-import on from '../../assets/sound_on.png';
-import muted from '../../assets/sound_muted.png';
+
 
 const MusicPlayer = (props) => {
+    
+    const [targetRange, setTargetRange] = useState(50/100);
+
+    function propsTarget(target){
+        setTargetRange(target)
+    }
+
     return(
         <section className="music-player">
             <div className="on-off">
@@ -20,12 +26,13 @@ const MusicPlayer = (props) => {
                 </div>
             </div>
             <div className="controles-audio">
-                <button className="btn-player sound-on"><img src={on} alt="Sound Icon"/></button>
-                <button className="btn-player sound-off"><img src={muted} alt="Muted Icon"/></button>
-                <input type="range" min="0" max="100" defaultValue="50" className="volume-range"/>
+                <button onClick={() => props.mutarVolume(targetRange)} className="btn-player sound-on"><img src={props.soundMuted} alt="Sound Icon"/></button>
+                <input type="range" min="0" max="100" defaultValue="50" className="volume-range" onChange={(e) => {props.mudarVolume(e.target.value)
+                propsTarget(e.target.value)}}/>
             </div>
         </section>
     );
+    
 };
 
 export default MusicPlayer;

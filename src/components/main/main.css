@@ -91,6 +91,7 @@ main{
     border-radius: 10px;
     background-color: rgba(42, 46, 46, 0.096);
     gap: 50px;
+    user-select: none;
 }
 
 .music{

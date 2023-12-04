@@ -58,40 +58,12 @@
 }
 
 .volume-range{
-    appearance: none;
     display: block;
     width: 100px;
     height: 2px;
-    background-color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.volume-range::-webkit-slider-thumb{
-    appearance: none;
-    display: block;
-    width: 12px;
-    height: 12px;
-    background-color: #ffffff;
-    border-radius: 50%;
-}
-
-.volume-range::-moz-range-thumb{
-    appearance: none;
-    display: block;
-    width: 12px;
-    height: 12px;
-    background-color: #ffffff;
-    border-radius: 50%;
-}
-
-.volume-range::-ms-thumb{
-    appearance: none;
-    display: block;
-    width: 12px;
-    height: 12px;
-    background-color: #ffffff;
-    border-radius: 50%;
+    accent-color: rgb(255, 0, 0);
 }
 
 .musica-escolhida{

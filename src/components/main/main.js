@@ -1,27 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './main.css'
 import albuns from "../../database";
 import play from '../../assets/play.svg'
 
+
 const Main = props => {
 
     const [albunsAbertos, setAlbunsAbertos] = useState({});
+    const [musicaEscolhidaChanged, setMusicaEscolhidaChanged] = useState(false);
+    const [audioInstance, setAudioInstance] = useState(null);
+    useEffect(() => {
+        if (musicaEscolhidaChanged) {
+            props.play_pause();
+            setMusicaEscolhidaChanged(false);
+        }
+    }, [musicaEscolhidaChanged, props.play_pause]);
 
-    console.log(props.verificar);
 
     function musicaEscolhida(musica, album){
+        const novaInstancia = musica.musica;
 
-        props.setMusicaEscolhida(() => ({
+        if (audioInstance) {
+            audioInstance.pause();
+            props.setVerificar(false);
+        }
+
+        novaInstancia.play();
+
+        setAudioInstance(novaInstancia);
+
+        musica.musica.volume = 0.5;
+
+        props.setMusicaEscolhida({
             musicaNome: musica.nome,
-            play: playMusica(),
-            pause: 
-            pauseMusica(), 
+            musica: musica.musica,
             duracao: musica.musica.duration,
             volume: musica.musica.volume,
             albumNome: album.nome,
             ano: album.ano,
-            imagem: album.imagem
-        }))
+            imagem: album.imagem,
+          });
+    
+          setMusicaEscolhidaChanged(true);
     }
 
     function abrirAlbum(albumId) {
@@ -60,8 +80,7 @@ const Main = props => {
                     {albuns.map( album => {
                         return(<div className={`music ${albunsAbertos[album.id_string] ? 'album-aberto' : ''}`} key={album.id}>
                             {album.songs.map( musica => (
-                                <div className="nome-musica" onClick={() => {musicaEscolhida(musica, album)
-                                    playMusica()}} key={musica.id}>
+                                <div className="nome-musica" onClick={() => {musicaEscolhida(musica, album)}} key={musica.id}>
                                     <div className="nome-id">
                                         <span className="nmr-musica">{musica.id}</span>
                                         <button className="btn-playlist"><img src={play} alt="play"/></button>
