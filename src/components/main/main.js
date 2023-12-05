@@ -28,14 +28,11 @@ const Main = props => {
         novaInstancia.play();
 
         setAudioInstance(novaInstancia);
-
-        musica.musica.volume = 0.5;
-
         props.setMusicaEscolhida({
             musicaNome: musica.nome,
             musica: musica.musica,
             duracao: musica.musica.duration,
-            volume: musica.musica.volume,
+            volume: musica.musica.volume = props.targetRange,
             albumNome: album.nome,
             ano: album.ano,
             imagem: album.imagem,

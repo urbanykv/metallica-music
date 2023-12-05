@@ -11,6 +11,30 @@
     bottom: 0px;
 }
 
+.music-range{
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    accent-color: rgb(255, 0, 0);
+    top: 0px;
+}
+
+.on-off{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.on-off span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-player{
     background: none;
     border: none;
@@ -91,7 +115,7 @@
     font-size: 14px;
 }
 
-.info-musica-escolhida span{
+.info-musica-escolhida span, .on-off span{
     font-size: 14px;
     color: rgb(204, 204, 204);
 }
