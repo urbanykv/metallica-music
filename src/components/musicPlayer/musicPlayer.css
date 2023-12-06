@@ -11,6 +11,38 @@
     bottom: 0px;
 }
 
+.bloqueio-controles{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 3;
+    cursor: no-drop;
+}
+
+.bloqueio-controles::before{
+    content: "Escolha uma música para desbloquear os controles.";
+    width: 150px;
+    color: white;
+    background-color: rgb(216, 32, 32);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: fixed;
+    top: -90px;
+    left: 15px;
+}
+
+.bloqueio-controles:hover::before{
+    display: flex;
+}
+
+.bloqueio-off{
+    display: none;
+}
+
 .music-range{
     width: 100%;
     height: 2px;

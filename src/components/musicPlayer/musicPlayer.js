@@ -14,12 +14,23 @@ const MusicPlayer = (props) => {
 
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
+    const [bloqueioControles, setBloqueioControles] = useState("bloqueio-controles")
     
     useEffect(() => {
         if(props.musicaEscolhida.musica) {
         const updateProgress = () => {
             setCurrentTime(props.musicaEscolhida.musica.currentTime);
             setDuration(props.musicaEscolhida.musica.duration);
+
+            if('musica' in props.musicaEscolhida){
+                setBloqueioControles('bloqueio-off');
+            }
+
+            if(props.musicaEscolhida.musica.currentTime >= props.musicaEscolhida.musica.duration){
+                props.setMusicaEscolhida({});
+                setCurrentTime(0)
+                setBloqueioControles('bloqueio-controles')
+            }
         };
 
         props.musicaEscolhida.musica.addEventListener('timeupdate', updateProgress);
@@ -38,15 +49,18 @@ const MusicPlayer = (props) => {
 
     return(
         <section className="music-player">
-                <input
-                    className="music-range"
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={(currentTime / duration) * 100 || 0}
-                    onChange={(e) => {handleChange(e.target.value)
-                    }}
-                />
+            <div className={bloqueioControles}>
+                {/*Apenas bloqueia os controles quando não á musicas tocando.*/}
+            </div>
+            <input
+                className="music-range"
+                type="range"
+                min="0"
+                max="100"
+                value={(currentTime / duration) * 100 || 0}
+                onChange={(e) => {handleChange(e.target.value)
+                }}
+            />
             <div className="on-off">
                 <button onClick={props.play_pause} className={props.playBtn}><img src={play} alt="Play Icon"/></button>
                 <button onClick={props.play_pause} className={props.pauseBtn}><img src={pause} alt="Pause Icon"/></button>
