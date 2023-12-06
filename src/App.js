@@ -18,6 +18,7 @@ function App() {
 
   function play_pause(){
     setVerificarSoundMuted(false);
+    musicaEscolhida.musica.currentTime = 0
     setOnBtn('sound-on');
     setMutedBtn('sound-off');
     if(!verificar){

@@ -16,14 +16,15 @@ main{
 }
 
 .selecionar-album{
-    padding: 250px 0;
+    padding: 50px 0;
     width: 100%;
     height: 600px;
     display: flex;
     justify-content: flex-start;
-    gap: 200px;
+    gap: 100px;
     align-items: center;
     flex-direction: column;
+    color: white;
 }
 
 .albuns{
@@ -92,6 +93,7 @@ main{
     background-color: rgba(42, 46, 46, 0.096);
     gap: 50px;
     user-select: none;
+    margin-top: 70px;
 }
 
 .music{
@@ -169,4 +171,44 @@ main{
 
 .album-aberto{
     display: flex;
+}
+
+@media (max-width: 838px) {
+    .album, .select-btn{
+        border: none;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25vw;
+        height: 25vh;
+        cursor: pointer;
+        transition: 0.5s ease;
+    }
+}
+
+@media (max-width: 750px)  {
+    .musicas{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: rgba(42, 46, 46, 0.096);
+        gap: 50px;
+        user-select: none;
+        margin-top: 70px;
+
+    }
+
+    .nome-musica{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        width: 93vw;
+        padding: 10px 0;
+        height: 50px;
+        font-weight: 500;
+        font-size: 12px;
+    }
 }

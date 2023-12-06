@@ -4,8 +4,9 @@
     background-color: rgba(0, 0, 0, 0.644);
     backdrop-filter: blur(8px);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 70px;
     position: fixed;
     z-index: 2;
     bottom: 0px;
@@ -150,4 +151,89 @@
 .info-musica-escolhida span, .on-off span{
     font-size: 14px;
     color: rgb(204, 204, 204);
+}
+
+@media (max-width: 838px) {
+    .music-player{
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.644);
+        backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        position: fixed;
+        z-index: 2;
+        bottom: 0px;
+    }
+}
+
+@media (max-width: 750px)  {
+    .music-player{
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.644);
+        backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        position: fixed;
+        z-index: 2;
+        bottom: 0px;
+    }
+
+    .musica-escolhida{
+        width: 185px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .imagem-musica-escolhida{
+        width: 25px;
+    }
+    
+    .info-musica-escolhida{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .info-musica-escolhida h3{
+        color: white;
+        font-size: 11px;
+    }
+    
+    .info-musica-escolhida span, .on-off span{
+        font-size: 10px;
+        color: rgb(204, 204, 204);
+    }
+
+    .volume-range{
+        display: none;
+        width: 100px;
+        height: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+        accent-color: rgb(255, 0, 0);
+    }
+
+    .on-off{
+        gap: 5px;
+    }
+
+    .on-off span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+    .sound-on{
+        display: none;
+    }
 }

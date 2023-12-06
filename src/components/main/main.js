@@ -64,6 +64,7 @@ const Main = props => {
                 {/* Apenas Background */}
             </section>
             <section style={albunsAbertos['kill'] || albunsAbertos['ride'] || albunsAbertos['black'] ? {height: 1200 + 'px'}: {height: 650 + 'px'}}  className="selecionar-album">
+                <h2>Selecione o album que deseja ouvir</h2>
                 <ul className="albuns">
                     {albuns.map( album => (
                         <li className="album" key={album.id}>
@@ -74,6 +75,7 @@ const Main = props => {
                     ))}
                 </ul>
                 <div  className="musicas">
+
                     {albuns.map( album => {
                         return(<div className={`music ${albunsAbertos[album.id_string] ? 'album-aberto' : ''}`} key={album.id}>
                             {album.songs.map( musica => (

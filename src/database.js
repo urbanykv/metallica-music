@@ -65,7 +65,7 @@ const albuns = [
     {
         id: 2,
         id_string: 'black',
-        nome: 'Metallica (Black Album)',
+        nome: 'Metallica',
         imagem: blackImagem,
         ano: new Date('1991').getFullYear(),
         songs: [
